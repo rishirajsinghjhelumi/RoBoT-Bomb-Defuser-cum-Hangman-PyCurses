@@ -1,0 +1,75 @@
+#+TITLE:Python Assignment - 4
+#+AUTHOR:Rishi Raj Singh Jhelumi
+#+ROLLNO:201101046
+#+EMAIL:rishirajsingh.jhelumi@students.iiit.ac.in
+
+* Code Organization
+  - Made about 14 modules to perform the following tasks:
+    + Display *Welcome Message* (containing 5 modules).
+    + Display *Story Line* (containing 3 modules).
+    + Display *Rules* (containing 1 module).
+    + Display *Progression to next level* (containing 2 modules).
+    + Display *Game Pause* (containg 1 module).
+    + Display *Game-over* (containing 1 module).
+    + Display *Final level victory* (containing 1 module).
+  - By making modules the code became compact.
+  - Was not looking Bulky.
+  - Can be easily understood by another user.
+  - Can Know which file is being used ,where and when.
+* Class Decomposition
+  - Class was used to make the readibility of the code.
+  - It ensures easy understanding of the code.
+  - It lets us easily determine what object to use.
+  - Using Encapsulation , so that some values which should not be tempered with is not easily modifiable.
+  - The class:
+    + Checks the movement of the robot in any direction.
+    + Checks whether the robot has been hit by the enemy bomb or not.
+    + Check what strings to add to the screen.
+    + Checks when to add enemy bombs.
+  - *Methods* Made:
+    + *key_s* : Its called when the user presses the down arrow key.
+    + *key_w* : Its called when the user presses the up arrow key.
+    + *key_d* : Its called when the user presses the right arrow key.
+    + *key_a* : Its called when the user presses the left arrow key.
+    + *check_bullet* : Checks when to add the enemy bomb.
+    + *check_bullet_hit* : Checks whether the robot has been hit by an enemy bomb or not.
+    + *print_shape* : Prints the different movement of the robots on the screen.
+* Advantages
+  - *Help By modules*
+    + Modules made code design simple.
+    + Simply by executing the different modules the desired output was obtained.
+    + It kept main logic of the program in one file , while the extra features in the other.
+    + It made the program look simple and avoided it being bulky.
+  - *Flexibility of the code*
+    + Made more than ten functions to perform a specific tasks.
+    + So that whenever another programmer wants to modify the code he just needs to call the functions.
+    + Well defined variables,function names etc have been used.
+* Miscellaneous
+ + *Control Flow*
+     - The game begins with a *WELCOME NOTE* to the game.
+     - Then there is a short *STORY* about the game.
+     - Then there are a list of *RULES* one need to follow while playing the game.
+     - Then the game begins.
+     - Whenever the Player clears a level , a short *applause* is given and a message about the next level.
+     - Whenever the Player hits the enemy bomb or is unable to collect the diffuse codes , the program exits displaying a *GAME-OVER*.
+     - Finally when the Player clears all the levels a *trophy* is awarded to him.
+ + *The Logic*
+     - The main Idea behind the program was to keep a track of the *x* and *y* coordinates.
+     - If the robot hovers over an enemy bomb , for both of them *x* and *y* coordinates becomes the same so game exits.
+     - Similarly If the robot hovers above the diffuse codes, the diffuse codes are collected.
+     - If all the codes are collected within the time limit given then the player wins.
+* Extra Features
+  - Made Use of *ASCII ART* at many places:
+    + For the beggining of the game.
+    + For the story of the game.
+    + For the pause of game.
+    + Thumbs'Up For going to next level.
+    + Devil's Message For Going to next level.
+    + For Game Over.
+    + For Clearing all the levels and defeating the Devil.
+  - Used *Enemy Bombs* continuously Falling From the top.
+  - Used *HANGMAN* type word guessing *DIFFUSE CODES*.
+  - Used *TIME LIMIT* for each Level.
+* Screen Shots
+  - *Game Play*:[[file:1.png]]
+  - *Between Levels*:[[file:2.png]]

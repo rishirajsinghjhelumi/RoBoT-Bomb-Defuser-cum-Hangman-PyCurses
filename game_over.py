@@ -1,0 +1,35 @@
+import curses,curses.panel,curses.ascii
+win=curses.initscr()
+curses.curs_set(0)	
+curses.start_color()
+curses.init_pair(1,curses.COLOR_CYAN,curses.COLOR_WHITE)
+curses.init_pair(2,curses.COLOR_RED,curses.COLOR_WHITE)
+size=win.getmaxyx()
+m="Game By :-> Rishi Raj"
+b="Better Luck Next Time !!!! HA HA HA...."
+m1="The Devil Defeated You!!!!"
+x=[b[0:j] for j in range(1,len(b)+1)]
+win.bkgd(curses.color_pair(1))
+win.keypad(1)
+win.nodelay(1)
+win.border('|','|','*','*','(',')','(',')')
+win.getch()
+for i in x:
+	win.addstr(size[0]/2-3,15," .d8888b.         d8888 888b     d888 8888888888       .d88888b.  888     888 8888888888 8888888b.  ",curses.color_pair(2))
+	win.addstr(size[0]/2-2,15,"d88P  Y88b       d88888 8888b   d8888 888             d88P" "Y88b 888     888 888        888   Y88b ",curses.color_pair(2))
+	win.addstr(size[0]/2-1,15,"888    888      d88P888 88888b.d88888 888             888     888 888     888 888        888    888 ",curses.color_pair(2))
+	win.addstr(size[0]/2,15,"888            d88P 888 888Y88888P888 8888888         888     888 Y88b   d88P 8888888    888   d88P",curses.color_pair(2))
+	win.addstr(size[0]/2+1,15,"888  88888    d88P  888 888 Y888P 888 888             888     888  Y88b d88P  888        8888888P\"",curses.color_pair(2))
+	win.addstr(size[0]/2+2,15,"888    888   d88P   888 888  Y8P  888 888             888     888   Y88o88P   888        888 T88b",curses.color_pair(2))
+	win.addstr(size[0]/2+3,15,"Y88b  d88P  d8888888888 888   \"   888 888             Y88b. .d88P    Y888P    888        888  T88b",curses.color_pair(2))
+	win.addstr(size[0]/2+4,15," \"Y8888P88 d88P     888 888       888 8888888888       \"Y88888P\"      Y8P     8888888888 888   T88b",curses.color_pair(2))
+	curses.beep()
+	win.addstr(size[0]-2, size[1]-len(m)-4,m,curses.A_BLINK | curses.color_pair(2)|curses.A_UNDERLINE|curses.A_BOLD)
+	win.addstr(4, size[1]/2-len(m1)/2,m1,curses.A_BLINK | curses.color_pair(2)|curses.A_UNDERLINE|curses.A_BOLD)
+	win.addstr(5, size[1]/2-len(b)/2,i,curses.A_BLINK | curses.color_pair(2)|curses.A_UNDERLINE|curses.A_BOLD)
+	curses.delay_output(80)
+	win.refresh()
+	win.clear()
+	win.border('|','|','*','*','(',')','(',')')
+curses.delay_output(1200)
+curses.endwin()
